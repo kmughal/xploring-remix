@@ -1,4 +1,4 @@
-import { Form } from "remix"
+import { Form, Outlet } from "remix"
 
 import fs from "fs"
 import path from "path"
@@ -31,6 +31,9 @@ export default function NewTodo() {
         <input type="text" name="todo" />
         <button type="submit">Add</button>
       </Form>
+      <main>
+        <Outlet />
+      </main>
     </>
   )
 }
